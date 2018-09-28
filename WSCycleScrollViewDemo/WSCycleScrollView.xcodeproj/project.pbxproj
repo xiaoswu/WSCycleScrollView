@@ -15,7 +15,7 @@
 		AF8A0F8F215B321900C1FFE9 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = AF8A0F8D215B321900C1FFE9 /* LaunchScreen.storyboard */; };
 		AF8A0F92215B321900C1FFE9 /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A0F91215B321900C1FFE9 /* main.m */; };
 		AF8A0F9B215B325C00C1FFE9 /* WSCycleScrollView.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A0F9A215B325C00C1FFE9 /* WSCycleScrollView.m */; };
-		AF8A0F9E215B600800C1FFE9 /* WSSingleImageCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A0F9D215B600800C1FFE9 /* WSSingleImageCell.m */; };
+		AF8A0F9E215B600800C1FFE9 /* WSCycleSingleCell.m in Sources */ = {isa = PBXBuildFile; fileRef = AF8A0F9D215B600800C1FFE9 /* WSCycleSingleCell.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -33,8 +33,8 @@
 		AF8A0F91215B321900C1FFE9 /* main.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		AF8A0F99215B325C00C1FFE9 /* WSCycleScrollView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSCycleScrollView.h; sourceTree = "<group>"; };
 		AF8A0F9A215B325C00C1FFE9 /* WSCycleScrollView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSCycleScrollView.m; sourceTree = "<group>"; };
-		AF8A0F9C215B600800C1FFE9 /* WSSingleImageCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSSingleImageCell.h; sourceTree = "<group>"; };
-		AF8A0F9D215B600800C1FFE9 /* WSSingleImageCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSSingleImageCell.m; sourceTree = "<group>"; };
+		AF8A0F9C215B600800C1FFE9 /* WSCycleSingleCell.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = WSCycleSingleCell.h; sourceTree = "<group>"; };
+		AF8A0F9D215B600800C1FFE9 /* WSCycleSingleCell.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = WSCycleSingleCell.m; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -88,8 +88,8 @@
 			children = (
 				AF8A0F99215B325C00C1FFE9 /* WSCycleScrollView.h */,
 				AF8A0F9A215B325C00C1FFE9 /* WSCycleScrollView.m */,
-				AF8A0F9C215B600800C1FFE9 /* WSSingleImageCell.h */,
-				AF8A0F9D215B600800C1FFE9 /* WSSingleImageCell.m */,
+				AF8A0F9C215B600800C1FFE9 /* WSCycleSingleCell.h */,
+				AF8A0F9D215B600800C1FFE9 /* WSCycleSingleCell.m */,
 			);
 			path = WSCycleScrollView;
 			sourceTree = "<group>";
@@ -165,7 +165,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				AF8A0F87215B321800C1FFE9 /* ViewController.m in Sources */,
-				AF8A0F9E215B600800C1FFE9 /* WSSingleImageCell.m in Sources */,
+				AF8A0F9E215B600800C1FFE9 /* WSCycleSingleCell.m in Sources */,
 				AF8A0F92215B321900C1FFE9 /* main.m in Sources */,
 				AF8A0F9B215B325C00C1FFE9 /* WSCycleScrollView.m in Sources */,
 				AF09E545215C94460069DC6B /* WSSecondViewController.m in Sources */,

@@ -7,7 +7,7 @@
 //
 
 #import "WSCycleScrollView.h"
-#import "WSSingleImageCell.h"
+#import "WSCycleSingleCell.h"
 
 static NSString * const cellId = @"WSCycleScrollViewId";
 
@@ -97,7 +97,7 @@ static const NSTimeInterval WSDefaultScrollTimeInterval = 2.0f;
     mainView.showsHorizontalScrollIndicator = NO;
     mainView.pagingEnabled = YES;
     
-    [mainView registerClass:[WSSingleImageCell class] forCellWithReuseIdentifier:cellId];
+    [mainView registerClass:[WSCycleSingleCell class] forCellWithReuseIdentifier:cellId];
     mainView.dataSource = self;
     mainView.delegate = self;
     
@@ -166,14 +166,12 @@ static const NSTimeInterval WSDefaultScrollTimeInterval = 2.0f;
 
 #pragma mark - privite method
 - (NSUInteger)ws_getCurrentPage{
-    NSUInteger page;
+    NSUInteger page = 0;
     
     if (_scrollDirection == WSCyclesScrollViewDirectionHorizontal) {
         page = (_mainView.contentOffset.x + _mainView.frame.size.width *0.5) / _mainView.frame.size.width;
     } else if (_scrollDirection == WSCyclesScrollViewDirectionVertical){
         page = (_mainView.contentOffset.y + _mainView.frame.size.height *0.5) / _mainView.frame.size.height;
-    } else {
-        page = 0;
     }
     
     return page;
@@ -185,9 +183,11 @@ static const NSTimeInterval WSDefaultScrollTimeInterval = 2.0f;
 }
 
 -(UICollectionViewCell *)collectionView:(UICollectionView *)collectionView cellForItemAtIndexPath:(NSIndexPath *)indexPath{
-    WSSingleImageCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
+    WSCycleSingleCell *cell = [collectionView dequeueReusableCellWithReuseIdentifier:cellId forIndexPath:indexPath];
     
-    cell.imageName = self.imageNames[indexPath.row % _imageNames.count];
+    UIImage *image = [UIImage imageNamed:self.imageNames[indexPath.row % _imageNames.count]];
+    cell.style = WSCycleSingleCellStyleValue2;
+    cell.textLabel.text = @"这是一个很寂寞的天，下着有些伤心的雨！";
     return cell;
 }
 
